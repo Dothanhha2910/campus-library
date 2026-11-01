@@ -1,0 +1,20 @@
+{
+  "name": "campus-library-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Campus Library - System Under Test for SQA Class 10",
+  "main": "src/server.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "reset-db": "node src/resetDb.js",
+    "smoke": "node --test test/smoke.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "google-auth-library": "^9.14.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
