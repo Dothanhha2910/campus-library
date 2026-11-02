@@ -93,6 +93,7 @@ backend/     Express API (src/routes/: auth, books, loans, profile, admin),
              cơ sở dữ liệu SQLite trong backend/data/
 frontend/    index.html, styles.css, app.js
 e2e/         Bộ auto test Playwright (Page Object Model)
+qa-artifact/ Tài liệu QA: qa-artifact/test-cases/ (test case dạng .md, mỗi nhóm chức năng một file)
 docs/        TEST_GUIDE.md  - đặc tả yêu cầu và quy tắc nghiệp vụ chi tiết
              Campus-Library-Test-Document.xlsx - tài liệu kiểm thử (checklist và test case)
 instructor/  ANSWER_KEY.md  - tài liệu dành riêng cho giảng viên
