@@ -1,6 +1,6 @@
 # Campus Library
 
-**Campus Library** là một website quản lý thư viện trường học. Thành viên (member) có thể tìm kiếm, mượn, trả, gia hạn sách và theo dõi tiền phạt quá hạn; quản trị viên (admin) quản lý danh mục sách, người dùng và xem thống kê hoạt động của thư viện.
+**Campus Library** là một website quản lý thư viện trường học. Thành viên (member) có thể tìm kiếm, mượn, trả, gia hạn sách và theo dõi tiền phạt quá hạn; quản trị viên (admin) quản lý danh mục sách, người dùng và xem thống kê hoạt động của thư viện. Chi tiết yêu cầu chức năng và quy tắc nghiệp vụ nằm trong [`docs/SRS.md`](docs/SRS.md).
 
 ## Tính năng
 
@@ -92,35 +92,7 @@ Nếu không cấu hình cả hai chế độ, nút đăng nhập Google sẽ �
 backend/     Express API (src/routes/: auth, books, loans, profile, admin),
              cơ sở dữ liệu SQLite trong backend/data/
 frontend/    index.html, styles.css, app.js
-e2e/         Bộ auto test Playwright (Page Object Model)
-qa-artifact/ Tài liệu QA: qa-artifact/test-cases/ (test case dạng .md, mỗi nhóm chức năng một file)
-docs/        TEST_GUIDE.md  - đặc tả yêu cầu và quy tắc nghiệp vụ chi tiết
-             Campus-Library-Test-Document.xlsx - tài liệu kiểm thử (checklist và test case)
-instructor/  ANSWER_KEY.md  - tài liệu dành riêng cho giảng viên
+docs/        SRS.md  - đặc tả yêu cầu phần mềm (chức năng, quy tắc nghiệp vụ, API)
 ```
 
-## Kiểm tra nhanh ứng dụng (Smoke Test)
-
-```bash
-cd backend
-npm run smoke
-```
-
-Lệnh này chạy một bài kiểm tra cơ bản để xác nhận ứng dụng khởi động và các luồng chính hoạt động bình thường.
-
-## Auto test (Playwright)
-
-Bộ kiểm thử chức năng tự động nằm trong thư mục `e2e/`, viết bằng Playwright theo mô hình Page Object Model. Playwright tự khởi động backend trên một cổng và cơ sở dữ liệu riêng, không ảnh hưởng dữ liệu đang dùng.
-
-```bash
-cd e2e
-npm install
-npx playwright install chromium   # chỉ cần chạy lần đầu
-npm test
-```
-
-Xem chi tiết cấu trúc và quy ước viết test trong [`e2e/README.md`](e2e/README.md).
-
-## Lưu ý
-
-Đây là ứng dụng quy mô nhỏ phục vụ học tập và chạy trên máy cá nhân, **không dành cho môi trường production**. Ứng dụng có thể còn chứa lỗi và lỗ hổng bảo mật (ví dụ SQL Injection, XSS, Broken Access Control), vì vậy chỉ chạy trên máy cá nhân và không triển khai lên máy chủ công khai hoặc Internet.
+> Đây là ứng dụng quy mô nhỏ chạy trên máy cá nhân, không dành cho môi trường production.

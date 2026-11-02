@@ -2,7 +2,7 @@
   "name": "campus-library-backend",
   "version": "1.0.0",
   "private": true,
-  "description": "Campus Library - System Under Test for SQA Class 10",
+  "description": "Campus Library - backend (REST API and web server)",
   "main": "src/server.js",
   "engines": { "node": ">=22.13" },
   "scripts": {
